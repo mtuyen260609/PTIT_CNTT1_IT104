@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = 5;
+        const arr = [1, 2, 3];
+        // a = 10;
+        // dòng này gây lỗi vì không thể gán lại giá trị mới cho biến khai báo bằng const
+        
+        arr.push(4);                   // Thành công
+        console.log("a = ", a);    // In ra 5
+        console.log("arr:", arr); // In ra [1, 2, 3, 4]
+        //vì a = 10 là gán lại vùng giá trị mới còn arr.push là thêm vào dữ liệu
+    </script>
+</body>
+
+</html>

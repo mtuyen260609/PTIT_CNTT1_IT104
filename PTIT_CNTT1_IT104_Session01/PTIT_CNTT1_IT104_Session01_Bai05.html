@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const response = {
+            data: {
+                id: 1,
+                title: "Destructuring in JavaScript",
+                author: {
+                    name: "Dev",
+                    email: "Dev@gmail.com",
+                },
+            },
+        };
+        const { title, author } = response.data;
+        const { name: authorName, email: authorEmail } = author;
+        console.log("Title:", title);
+        console.log("Author Name:", authorName);
+        console.log("Author Email:", authorEmail);
+    </script>
+</body>
+
+</html>

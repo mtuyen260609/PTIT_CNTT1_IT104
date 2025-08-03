@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const checkParity = (a) => {
+            if (typeof a !== "number" || isNaN(a)) {
+                console.log(`${a} is not a number`);
+            } else if (a % 2 === 0) {
+                console.log(`${a} is an even number`);
+            } else {
+                console.log(`${a} is odd`);
+            }
+        };
+        checkParity("b");
+        checkParity(2);
+        checkParity(1);
+    </script>
+</body>
+
+</html>

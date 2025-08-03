@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createUser(name, age = 18, role = "user") {
+            if (!name || typeof name !== "string") {
+                console.error("Tên người dùng không hợp lệ!");
+                return null;
+            }
+            const user = {
+                name: name,
+                age: age,
+                role: role
+            };
+            console.log(user);
+            return user;
+        }
+        createUser("Dev");
+
+        createUser("Nguyen Van A", 20, "Admin");
+
+    </script>
+</body>
+
+</html>
