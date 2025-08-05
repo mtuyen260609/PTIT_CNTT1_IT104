@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const student = {
+        name: "Dev",
+        age: 20,
+        listMonHoc: [
+            { subject: "Math", score: 10 },
+            { subject: "English", score: 5 },
+            { subject: "Physics", score: 6 },
+            { subject: "Literature", score: 8.5 }
+        ]
+    }
+
+    const getStudentSummary = (student) => {
+        const { name, age, listMonHoc } = student;
+        let avg = 0;
+        let min = listMonHoc[0];
+        let max = listMonHoc[0];
+
+        for (const el of listMonHoc) {
+            avg += el.score;
+            if (el.score > max.score) max = el;
+            if (el.score < min.score) min = el;
+        }
+
+        avg = avg / listMonHoc.length;
+
+        let hs = "";
+        if (avg >= 8.5) {
+            hs = "Học sinh giỏi";
+        } else if (avg >= 7) {
+            hs = "Học sinh khá";
+        } else if (avg >= 5) {
+            hs = "Học sinh trung bình";
+        } else {
+            hs = "Học sinh yếu";
+        }
+
+        console.log(`${name} is ${age} years old.`);
+        console.log(`Average score: ${avg.toFixed(2)} → ${hs}`);
+        console.log(`Best subject: ${max.subject} (${max.score})`);
+        console.log(`Weakest subject: ${min.subject} (${min.score})`);
+    
+    }
+
+    getStudentSummary(student);
+</script>
+
+</html>
