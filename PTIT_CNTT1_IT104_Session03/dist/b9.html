@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Calculator</title>
+</head>
+<body>
+  <h2>Máy tính đơn giản</h2>
+  <input type="text" id="input1" placeholder="Nhập số thứ nhất" />
+  <input type="text" id="input2" placeholder="Nhập số thứ hai" />
+  <br><br>
+
+  <button onclick="handleCalc('+')">+</button>
+  <button onclick="handleCalc('-')">-</button>
+  <button onclick="handleCalc('*')">*</button>
+  <button onclick="handleCalc('/')">/</button>
+  <button onclick="handleCalc('^')">^</button>
+  <button onclick="handleCalc('√')">√</button>
+  <button onclick="handleCalc('!')">!</button>
+  <br><br>
+
+  <div id="result"></div>
+
+  <script src="b9.js"></script>
+</body>
+</html>
